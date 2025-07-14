@@ -1,0 +1,54 @@
+
+
+.pageConsultSec {
+  position: relative;
+  padding: 10rem 0;
+
+  @include u-mqMax {
+    padding: 6rem 0;
+  }
+
+  &__inner {
+    position: relative;
+    @include u-contentCenter($widthPC: 128rem);
+  }
+
+  &__bnrTxt {
+    display: block;
+    color: $blue01;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0 auto;
+    width: max-content;
+  }
+
+  &__listItem {
+    list-style: disc;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2;
+
+    @include u-mqMax {
+      line-height: 1.8;
+    }
+  }
+
+  &__frame {
+    margin: 4rem auto 0;
+    height: 1100px;
+
+    @include u-mqMax {
+      height: 900px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

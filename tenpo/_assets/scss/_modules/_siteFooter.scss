@@ -1,0 +1,208 @@
+/*====================================================================
+siteFooter
+====================================================================*/
+.siteFooter {
+  background: $blue01;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: $blue01;
+  }
+
+  @include u-mqMax {
+    &::before {
+      content: "";
+      top: -5.9rem;
+      width: 100%;
+      background-color: $blue01;
+    }
+  }
+
+  &__innerArea {
+    border-top-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    background: $white;
+
+    @include u-mqMax {
+      border-top-left-radius: 6rem;
+      border-top-right-radius: 6rem;
+    }
+  }
+
+  &__clmArea {
+    @include u-flex($jc: space-between);
+    @include u-contentCenter;
+    padding: 8rem 0;
+
+    @include u-mqMax {
+      flex-direction: column;
+      padding: 5.6rem 3.75rem;
+      max-width: 100%;
+    }
+  }
+
+  &__leftArea {
+    @include u-flex($fd: column, $jc: flex-start);
+
+    @include u-mqMax {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 22.8rem;
+
+    @include u-mqMax {
+      width: 25.1rem;
+    }
+  }
+
+  &__caption {
+    margin-top: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+
+    @include u-mqMax {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.33;
+      text-align: center;
+    }
+  }
+
+  // nav
+  &__nav {
+    @include u-flex($fw: wrap);
+    gap: 8rem;
+
+    @include u-mqMax {
+      margin-top: 6rem;
+      gap: 5rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__pageList {
+    @include u-mqMax {
+      width: 100%;
+    }
+  }
+
+  &__pageItem {
+    &:not(:first-child) {
+      margin-top: 1.2rem;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 2rem;
+
+      @include u-mqMax {
+        margin-top: 2.4rem;
+      }
+    }
+  }
+
+  &__pageTtl {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include u-mqMax {
+      color: $blue01;
+      display: block;
+      font-size: 3.2rem;
+      line-height: 1.25;
+      text-align: center;
+    }
+  }
+
+  &__pageLink {
+    @include u-trsPC;
+    display: block;
+    color: $textColor;
+    font-size: 1.4rem;
+    line-height: 1.4;
+
+    @include u-mqMax {
+      font-size: 2rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2504 6.5V16.25C19.2504 16.4489 19.1714 16.6397 19.0307 16.7803C18.8901 16.921 18.6993 17 18.5004 17C18.3015 17 18.1107 16.921 17.9701 16.7803C17.8294 16.6397 17.7504 16.4489 17.7504 16.25V8.31031L7.03104 19.0306C6.89031 19.1714 6.69944 19.2504 6.50042 19.2504C6.30139 19.2504 6.11052 19.1714 5.96979 19.0306C5.82906 18.8899 5.75 18.699 5.75 18.5C5.75 18.301 5.82906 18.1101 5.96979 17.9694L16.6901 7.25H8.75042C8.5515 7.25 8.36074 7.17098 8.22009 7.03033C8.07943 6.88968 8.00042 6.69891 8.00042 6.5C8.00042 6.30109 8.07943 6.11032 8.22009 5.96967C8.36074 5.82902 8.5515 5.75 8.75042 5.75H18.5004C18.6993 5.75 18.8901 5.82902 19.0307 5.96967C19.1714 6.11032 19.2504 6.30109 19.2504 6.5Z" fill="%230F1931"/></svg>');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__btn {
+    @include u-mqMax {
+      width: 100%;
+      padding-top: 1rem;
+    }
+  }
+
+  &__btnLink {
+    &:nth-of-type(2) {
+      margin-top: 1.6rem;
+    }
+
+    @include u-mqMax {
+      width: 100% !important;
+    }
+  }
+
+  &__tel {
+    display: block;
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+
+    @include u-mqMax {
+      margin-top: 2.4rem;
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &__hr {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include u-mqMax {
+      margin-top: .8rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  // copy
+  &__copy {
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @include u-mqMax {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/*====================================================================
+Inquiry page
+====================================================================*/
+.secThank {
+  padding: 28rem 0 18rem;
+
+  @include u-mqMax {
+    padding: 15rem 1.6rem 6rem;
+  }
+
+  &__innerArea {
+    max-width: 112rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include u-mqMax {
+      text-align: unset;
+    }
+  }
+
+  &__headerTtl {
+    font-size: 4rem;
+    font-weight: 600;
+    color: $blue01;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+
+    @include u-mqMax {
+      font-size: 2.8rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__txt {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin: 0;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+  }
+}
+
+  .secInquiry.is-thanks-page {
+    padding-top: 6rem;
+    .secInquiry__inner {
+      display: none;
+    }
+  }
+
+

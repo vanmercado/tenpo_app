@@ -1,0 +1,14 @@
+/*====================================================================
+bnrC
+====================================================================*/
+.bnrC {
+  @include u-articleText;
+  @include u-trsPC;
+  padding: 20px 80px;
+  border: 2px solid $keyColor02;
+  font-weight: bold;
+
+  @include u-hover {
+    background: $keyColor02;
+  }
+}

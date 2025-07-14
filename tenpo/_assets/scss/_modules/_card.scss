@@ -1,0 +1,49 @@
+/*====================================================================
+card
+====================================================================*/
+.card {
+  display: block;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+
+  @include u-hover {
+    [class$="__thumb"] {
+      transform: scale(1.1);
+    }
+  }
+
+  @include u-mqMax {
+    border-radius: 7px;
+  }
+
+  &__thumb {
+    @include u-trsPC;
+  }
+
+  &__thumbImg {
+
+  }
+
+  &__textArea {
+    width: 100%;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba($bgColor01, 0.8);
+
+    @include u-mqMax {
+      padding: 5px 7px;
+    }
+  }
+
+  &__time {
+    @include u-articleText($fzPC: 1.2rem, $lhPC: 1);
+  }
+
+  &__postTitle {
+    @include u-articleText;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,1506 @@
+/*====================================================================
+Function / App Features
+====================================================================*/
+.secFeatCategory {
+    &__list {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 114rem;
+        @include u-flex ($ai: center, $fw: wrap);
+        column-gap: 10rem;
+        row-gap: 1rem;  
+        position: relative;
+        padding: 4.5rem 0;
+
+        @include u-mqMax {
+            column-gap: 0.7rem;
+            row-gap: 0;
+            align-items: stretch;
+            justify-content: center;
+            margin: 1rem auto 0 auto;
+        }
+    }
+    &__listItem {
+        @include u-flex($ai:center, $jc:center);
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -5rem;
+            transform: translateY(-50%);
+            width: 0.1rem;
+            height: 1.55rem;
+            background-color: $black01;
+        }
+        @include u-mqMax {
+            width: 18rem;
+            &::after {
+                display: none
+            }
+        }
+        
+    }
+    &__listItem:last-child {
+        &::after {
+            display: none
+        }
+    }
+    &__wrap {
+        @include u-hoverOp;
+        @include u-trs;
+        text-decoration: none !important;
+
+        @include u-mqMax {
+            width: 17.7rem;
+            border: 1px solid #2A4BBC;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__ttl {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #2A4BBC;
+        padding: 0 2.6rem 0 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" transform="rotate(90 10 10)" fill="%232A4BBC"/><path d="M14.4997 6.99775L5.49971 6.99775C5.40859 6.99804 5.31928 7.02317 5.24138 7.07044C5.16348 7.11771 5.09994 7.18533 5.05762 7.26603C5.01529 7.34672 4.99577 7.43743 5.00116 7.52839C5.00655 7.61935 5.03665 7.70712 5.08821 7.78225L9.58821 14.2822C9.77471 14.5517 10.2237 14.5517 10.4107 14.2822L14.9107 7.78225C14.9628 7.70728 14.9933 7.61947 14.999 7.52835C15.0047 7.43724 14.9853 7.34631 14.943 7.26545C14.9006 7.18458 14.8369 7.11687 14.7587 7.06968C14.6806 7.02248 14.591 6.99761 14.4997 6.99775Z" fill="white"/></svg>');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include u-mqMax {
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    @include u-mqMax {
+        .u-pcDb {
+            display: none;
+        }
+    }
+}
+.secFeatItems {
+    max-width: 112rem;
+    margin: 0 auto;
+    width: 100%;
+    @include u-flex ($ai: start, $jc: space-between);
+    padding:  10rem 0 0 0;
+    @include u-mqMax {
+        display: grid;
+        justify-content: center;
+    }
+    &__innerText {
+        position: relative;
+        width: 59rem;
+
+        @include u-mqMax {
+            width: 34rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__categoryTtlEn {
+        position: absolute;
+        top: -6.4rem;
+        left: -3rem;
+        font-size: 10rem;
+        font-weight: 700;
+        line-height: 1;
+        background: $blue01;
+        opacity: .1;
+    }
+
+    &__innerImg {
+        width: 50.7rem;
+        @include u-mqMax {
+            width: 34rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__categoryTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #2A4BBC;
+        padding-left: 3.6rem;
+        position: relative;
+        margin: 0 0 1rem 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/functionPage/secFunc_icoMarker-01.png');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+    &__ttl {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2A4BBC;
+        margin: 0 0 2rem 0;
+        position: relative;
+
+        &::before {
+            content: "Marketing / CRM";
+            position: absolute;
+            top: -11rem;
+            left: -3rem;
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba($blue01, 0.1);
+            min-width: 92.8rem;
+        }
+
+        @include u-mqMax {
+            font-size: 2.8rem;
+            line-height: 1.5;
+
+            &::before {
+                font-size: 3.6rem;
+                min-width: unset;
+                max-width: 100%;
+                top: -8rem;
+                left: 0;
+            }
+        }
+    }
+    &__txt {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+        @include u-mqMax {
+            font-size: 1.6rem;
+        }
+    }
+}
+.secNotification {
+    background-color: #FAFAFA;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+        min-width: 43rem;
+
+        @include u-mqMax {
+            min-width: 100%;
+        }
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secPromotion {
+    background-color: #FFF;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secInfoTrans {
+    background-color: #FAFAFA;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secBrand {
+    max-width: 112rem;
+    margin: 0 auto;
+    width: 100%;
+    @include u-flex ($ai: start, $jc: space-between);
+    padding:  10rem 0 0 0;
+    @include u-mqMax {
+        display: grid;
+        justify-content: center;
+    }
+    &__innerText {
+        width: 59rem;
+        min-height: 29.2rem;
+        @include u-mqMax {
+            width: 34rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__innerImg {
+        width: 50rem;
+        height: 37rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 30rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__categoryTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #2A4BBC;
+        padding-left: 3.6rem;
+        position: relative;
+        margin: 0 0 1rem 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/functionPage/secFunc_icoMarker-01.png');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+    &__ttl {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2A4BBC;
+        margin: 0 0 2rem 0;
+        position: relative;
+
+        &::before {
+            content: "Branding";
+            position: absolute;
+            top: -11rem;
+            left: -3rem;
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba($blue01, 0.1);
+            min-width: 48.9rem;
+        }
+        @include u-mqMax {
+            font-size: 2.8rem;
+            line-height: 1.5;
+            &::before {
+                font-size: 3.6rem;
+                min-width: unset;
+                max-width: 100%;
+                top: -8rem;
+                left: 0;
+            }
+        }
+    }
+    &__txt {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: #0F1931;
+        @include u-mqMax {
+            font-size: 1.6rem;
+        }
+    }
+}
+.secDesign {
+    background-color: #FAFAFA;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secIntelReq {
+    background-color: #FFF;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secCooperation {
+    max-width: 112rem;
+    margin: 0 auto;
+    width: 100%;
+    @include u-flex ($ai: start, $jc: space-between);
+    padding:  10rem 0 0 0;
+    @include u-mqMax {
+        display: grid;
+        justify-content: center;
+    }
+    &__innerText {
+        width: 59rem;
+        min-height: 29.2rem;
+        @include u-mqMax {
+            width: 34rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__innerImg {
+        width: 50rem;
+        height: auto;
+        margin-top: 9.6rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 30rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__categoryTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #2A4BBC;
+        padding-left: 3.6rem;
+        position: relative;
+        margin: 0 0 1rem 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/functionPage/secFunc_icoMarker-01.png');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+    &__ttl {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2A4BBC;
+        margin: 0 0 2rem 0;
+        position: relative;
+
+        &::before {
+            content: "Third-Party Links";
+            position: absolute;
+            top: -11rem;
+            left: -3rem;
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba($blue01, 0.1);
+            min-width: 93.6rem;
+        }
+        @include u-mqMax {
+            font-size: 2.8rem;
+            line-height: 1.5;
+
+            &::before {
+                font-size: 3.6rem;
+                min-width: unset;
+                max-width: 100%;
+                top: -8rem;
+                left: 0;
+            }
+        }
+    }
+    &__txt {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: #0F1931;
+        @include u-mqMax {
+            font-size: 1.6rem;
+        }
+    }
+}
+.secExternal {
+    background-color: #FAFAFA;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}
+.secData {
+    max-width: 112rem;
+    margin: 0 auto;
+    width: 100%;
+    @include u-flex ($ai: start, $jc: space-between);
+    padding:  10rem 0 0 0;
+    @include u-mqMax {
+        display: grid;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &__innerText {
+        width: 59rem;
+        min-height: 29.2rem;
+        @include u-mqMax {
+            width: 34rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__innerImg {
+        width: 50rem;
+        height: auto;
+        margin-top: 6.7rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 30rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__categoryTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #2A4BBC;
+        padding-left: 3.6rem;
+        position: relative;
+        margin: 0 0 1rem 0;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url('../images/functionPage/secFunc_icoMarker-01.png');
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+    &__ttl {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #2A4BBC;
+        margin: 0 0 2rem 0;
+        position: relative;
+
+        &::before {
+            content: "Analytics & Insights";
+            position: absolute;
+            top: -11rem;
+            left: -3rem;
+            font-size: 10rem;
+            font-weight: 700;
+            color: rgba($blue01, 0.1);
+            min-width: 106.4rem;
+        }
+        @include u-mqMax {
+            font-size: 2.8rem;
+            line-height: 1.5;
+            &::before {
+                font-size: 3.6rem;
+                min-width: unset;
+                max-width: 100%;
+                top: -8rem;
+                left: 0;
+                white-space: nowrap;
+            }
+        }
+    }
+    &__txt {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: #0F1931;
+        @include u-mqMax {
+            font-size: 1.6rem;
+        }
+    }
+}
+.secAnalysis {
+    background-color: #FAFAFA;
+    padding: 10rem 0;
+    @include u-mqMax {
+        padding: 6rem 0;
+    }
+    &__innerArea {
+        max-width: 112rem;
+        width: 100%;
+        margin: 0 auto;
+        @include u-flex ($ai: start, $jc: space-between);
+        @include u-mqMax {
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__innerText {
+        width: 40rem;
+        @include u-mqMax {
+            width: 34rem;
+            padding: 0 0 6rem 0;
+            margin: 0 auto;
+            order: 2;
+        }
+    }
+    &__innerImg {
+        width: 64rem;
+        height: 50rem;
+        @include u-mqMax {
+            width: 34rem;
+            height: 34rem;
+            order: 1;
+        }
+    }
+    &__labelTxt {
+        padding: 0.6rem 1.2rem;
+        background-color: #2A4BBC;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #FFF;
+        border-radius: 2rem;
+    }
+    &__label {
+        border-bottom: 0.3rem solid #D4DBF2;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -0.4rem;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #2A4BBC;
+            width: 2rem;
+            height: 0.3rem;
+            border-radius: 1rem;
+        }
+    }
+    &__ttl {
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin: 2rem 0 0 0;
+    }
+    &__subTtl {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #0F1931;
+        margin-bottom: 2rem;
+    }
+    &__txt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.8;
+        color: #0F1931;
+        min-width: 42rem;
+
+        @include u-mqMax {
+            min-width: 100%;
+        }
+    }
+    &__list {
+        max-width: 114rem;
+        margin: 6rem auto 0 auto;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        @include u-flex ($ai: stretch, $fw: wrap);
+        gap: 3rem;
+        @include u-mqMax {
+            gap: 1rem;
+            max-width: 34rem;
+        }
+    }
+    &__listItem {
+        width: 36rem;
+        min-height: 42.3rem;
+        border-radius: 0.9rem;
+        background-color: #FFF;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        @include u-mqMax {
+            width: 16.5rem;
+            min-height: 31.1rem;
+        }
+    }
+    
+    &__listItemFgr {
+        width: 100%;
+        height: 23rem;
+        margin: 0;
+        @include u-mqMax {
+            width: 100%;
+            height: 10.7rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__listItemContent {
+        padding: 2.4rem 1.6rem;
+        @include u-mqMax {
+            padding: 1.6rem 0.8rem;
+        }
+    }
+    &__listItemTtl {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #0F1931;
+        margin: 0 0 1rem 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+    &__listItemTxt {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 400;
+        color: #0F1931;
+        margin: 0;
+        @include u-mqMax {
+            font-size: 1.4rem;
+        }
+    }
+}

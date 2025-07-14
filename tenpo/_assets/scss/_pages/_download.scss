@@ -1,0 +1,372 @@
+.secDownload {
+  width: 100%;
+  height: auto;
+  background-color: $white02;
+
+  &__inner {
+    width: 100%;
+    max-width: 88rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 15rem 0;
+
+    @include u-mqMax {
+      padding: 15rem 2.25rem;
+    }
+  }
+
+  &__headingContainer {
+    margin-bottom: 4.6rem;
+  }
+
+  &__heading {
+    color: $blue06;
+    font-size: 3.9rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: $NotoSansJP;
+
+    @include u-mqMax {
+      font-size: 2.6rem;
+    }
+
+  }
+
+  &__desc {
+    margin-top: 2.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: $NotoSansJP;
+  }
+
+  &__content {
+    @include u-flex();
+    gap: 4.8rem;
+
+    @include u-mqMax {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 67rem;
+    height: auto;
+    box-shadow: 0.2rem 0.2rem 0.5rem #d0dffc;
+
+    @include u-mqMax {
+      max-width: 100%;
+    }
+  }
+
+  &__formContainer,
+  .wpcf7-form {
+    @include u-flex($fd: column);
+    gap: 4.6rem;
+  }
+
+  &__formGroup {
+    padding: 1.5rem 0 ;
+    border-top: 0.1rem solid #D6D6D6;
+    @include u-flex($ai: baseline);
+
+    &.lastGroup {
+      border-bottom: 0.1rem solid #D6D6D6;
+    }
+
+    @include u-mqMax {
+      padding: 1rem 0;
+    }
+  }
+
+  &__reqTag {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $white;
+    background-color: $red;
+    min-width: 2.8rem;
+    height: 1.6rem;
+    text-align: center;
+    align-content: center;
+    padding: 0.3rem 0;
+    font-family: $NotoSansJP;
+  }
+
+  &__label, 
+  &__labelNote {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: $NotoSansJP;
+    color: $black05;
+    min-width: 12rem;
+    margin-left: 0.8rem;
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    @include u-mqMax {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__labelGroup {
+    @include u-flex($ai:center);
+  }
+
+  &__labelNote {
+    margin-top: 0.5rem;
+  }
+
+  &__submitBtnCont {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -3px;
+      background: conic-gradient(
+        from 78deg,
+        black 0deg,
+        black 180deg,
+        #666 172deg,
+        #666 360deg
+      );
+      border-radius: 3.5rem;
+      z-index: 0;
+      width: 15.5rem;
+      height: 5rem;
+    }
+
+    @include u-mqMax {
+      &::before {
+        width: 10.5rem;  
+        height: 3rem;   
+      }
+    }
+  }
+
+&__submitBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 14.9rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $white;
+  background: $blue07;
+  padding: 1.5rem 0;
+  border: none;
+  border-radius: 3rem;
+  font-family: $NotoSansJP;
+  transition: 0.3s opacity ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include u-mqMax {
+    width: 100%;
+    max-width: 10rem;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+}
+
+
+  &__disclaimerCont {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $black05;
+
+    @include u-mqMax {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__disclaimerDesc {
+    line-height: 1.7;
+    font-family: $NotoSansJP;
+  }
+
+  &__disclaimerLink {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &__disclaimerListHead {
+    margin-top: 0.9rem;
+    font-family: $NotoSansJP;
+  }
+
+  &__disclaimerListItem {
+    line-height: 1.7;
+    font-family: $NotoSansJP;
+    list-style-type: none;
+    padding-left: 1.8rem;
+    position: relative;
+
+    &::before {
+      content: "・";
+      position: absolute;
+      top: 0.1rem;
+      left: 0;
+    }
+  }
+
+  &__input,
+  input[type="text"] {
+    width: 100%;
+    max-width: 48rem;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $black05;
+    border: 0.1rem solid #D6D6D6;
+    border-radius: 0.4rem;
+    background-color: $white;
+    margin-bottom: 0.5rem;
+
+    &::placeholder {
+      color: $black04;
+      font-size: 1.2rem;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $blue06;
+      box-shadow: 0 0 0 0.3rem rgba($blue06, 0.2);
+    }
+
+    @include u-mqMax {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.secDownloadThanks {
+  width: 100%;
+  background-color: $white02;
+
+  &__inner {
+    width: 100%;
+    max-width: 107.5rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 20rem 0;
+
+    @include u-mqMax {
+      padding: 15rem 1.7rem;
+      max-width: 100%;
+    }
+  }
+
+  &__head {
+    margin-bottom: 5.6rem;
+    text-align: center;
+
+    @include u-mqMax {
+      text-align: start;
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__heading {
+    font-family: $NotoSansJP;
+    font-size: 3.9rem;
+    font-weight: 700;
+    color: $blue01;
+
+    @include u-mqMax {
+      font-size: 2.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__content {
+    @include u-flex();
+    gap: 6rem;
+
+    @include u-mqMax {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__wrap:first-child {
+    width: 100%;
+    max-width: 22rem;
+
+    @include u-mqMax {
+      max-width: 100%;
+    }
+  }
+
+  &__desc, 
+  &__listTitle,
+  &__item {
+    font-family: $NotoSansJP;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: $black05;
+
+    span {
+      font-family: $NotoSansJP;
+    }
+
+    @include u-mqMax {
+      font-size: 1.48rem;
+
+      span {
+        color: $blue01;
+        text-decoration: underline;
+        font-family: $NotoSansJP;
+      }
+    }
+  }
+
+  &__listTitle {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-top: 1.8rem;
+
+    @include u-mqMax {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-size: 2rem;
+
+    &::before {
+      content: "・";
+    }
+
+    @include u-mqMax {
+      font-size: 1.5rem;
+    }
+  }
+
+  iframe {
+    max-width: 78.8rem;
+    margin-top: 4rem;
+
+    @include u-mqMax {
+      max-width: 100%;
+    }
+  }
+}

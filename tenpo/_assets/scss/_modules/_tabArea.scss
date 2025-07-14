@@ -1,0 +1,65 @@
+/*====================================================================
+tabArea
+====================================================================*/
+.tabArea {
+
+  &__btnList {
+    @include u-flex($jc: space-between);
+  }
+
+  &__btnItem {
+    flex-basis: 100%;
+    margin: 0 2px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  &__btnLink {
+    @include u-articleText;
+    @include u-trsPC;
+    padding: 20px 15px;
+    display: block;
+    background: $bgColor01;
+    font-weight: bold;
+    text-align: center;
+
+    @include u-hover {
+      background: $textColor;
+      color: $bgColor01;
+    }
+
+    @include u-mqMax {
+      padding: 5px 10px;
+    }
+
+    &.is-open {
+      background: $bgColor04;
+      cursor: default;
+
+      @include u-hover {
+        background: $bgColor04;
+        color: $textColor;
+      }
+    }
+  }
+
+  &__contentItem {
+    padding: 40px 50px;
+    background: $bgColor04;
+
+    display: none;
+
+    @include u-mqMax {
+      padding: 20px 15px;
+    }
+
+    &.is-open {
+      display: block;
+    }
+  }
+}

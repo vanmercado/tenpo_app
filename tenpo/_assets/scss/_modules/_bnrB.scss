@@ -1,0 +1,56 @@
+/*====================================================================
+bnrB
+====================================================================*/
+.bnrB {
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    @include u-trsPC;
+    content: '';
+    width: 0;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $keyColor01;
+  }
+
+  @include u-hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &__layer {
+    @include u-articleText;
+    padding: 15px 100px 15px 15px;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 60px;
+      height: 2px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      background: $textColor;
+    }
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      border-right: 3px solid $textColor;
+      transform: translate(-50%, -100%) skewX(60deg);
+    }
+  }
+}

@@ -1,0 +1,906 @@
+/*====================================================================
+Tips
+====================================================================*/
+.tipsPage {
+  background-color: $gray01;
+}
+
+.secTipBox {
+  padding: 18rem 0 10rem;
+
+  @include u-mqMax($maxW: $windowSP) {
+    padding: 15rem 0 6rem 0;
+
+    &__inner {
+      padding: 4.9rem 1.6rem;
+      border-radius: 2rem;
+      max-width: calc(100% - 3.2rem);
+      gap: 0;
+    }
+  }
+}
+
+.secAppTip {
+  &__inner {
+    @include u-flex($jc: space-between, $ai: center);
+    gap: 6rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      @include u-flex($fd: column);
+      gap: 2rem;
+    }
+  }
+
+  &__content {
+    @include u-flex($fw: wrap, $ai: center);
+    gap: 1rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: justify;
+
+    @include u-mqMax($maxW: $windowSP) {
+      letter-spacing: 0;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid #D4DBF2;
+    }
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    color: #0f1931;
+    line-height: 1.5;
+  }
+
+  &__tag {
+    display: inline-block;
+    background-color: $blue01;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 1em;
+  }
+
+  &__date {
+    margin-left: auto;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1;
+    letter-spacing: 0;
+    color: $black01;
+
+    @include u-mqMax {
+      font-weight: 700;
+      margin-left: 0;
+    }
+  }
+
+  &__imageWrap {
+    flex-shrink: 0;
+    width: 71.3rem;
+    height: 50rem;
+    background-color: $gray01;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+      height: 22.2rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+.secAppTipDetail {
+  margin: 0 0 4rem;
+
+  @include u-mqMax($maxW: $windowSP) {
+    margin: 0 0 2.1rem;
+  }
+
+  &__inner {
+    @include u-flex($fw: wrap);
+    gap: 8rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      @include u-flex($fd: column);
+    }
+  }
+
+  &__sidebar {
+    width: 36rem;
+    min-width: 36rem;
+
+    @include u-mqMax {
+      display: none;
+    }
+  }
+
+  &__sidebarItem {
+    &:not(:first-child) {
+      margin-top: 8rem;
+    }
+  }
+
+  &__sidebarItemHd {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid $blue05;
+  }
+
+  &__articleItem {
+    @include u-flex($ai: flex-start, $jc: space-between);
+    gap: 2rem;
+    padding: 1.2rem 0;
+    color: $textColor;
+    @include u-trs;
+    @include u-hoverOp;
+
+    &:not(:first-child) {
+      border-top: 1px solid $blue05;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__articleContent {
+    @include u-flex($fw: wrap, $ai: center);
+    align-content: flex-start;
+    gap: 0.5rem 1rem;
+  }
+
+  &__articleTitle {
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__summary {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__articleImage {
+    width: 12rem;
+    height: 8.6rem;
+    flex: 0 0 auto;
+    position: relative;
+    top: 0.3rem;
+    background-color: $gray01;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__searchBox {
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+
+    @include u-mqMax {
+      max-width: 34.3rem;
+    }
+  }
+
+  &__searchBoxInput {
+    font-size: 1.6rem;
+    color: $black04;
+    line-height: 1.5;
+    border-radius: 2rem;
+    padding: 0.85rem 1.6rem;
+    border: 0.1rem solid $black;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $gray04;
+      font-weight: 700;
+    }
+  }
+
+  &__searchBoxBtn {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.6464 21.3536C19.8417 21.5488 20.1583 21.5488 20.3536 21.3536C20.5488 21.1583 20.5488 20.8417 20.3536 20.6464L19.6464 21.3536ZM17 18L16.6464 18.3536L19.6464 21.3536L20 21L20.3536 20.6464L17.3536 17.6464L17 18Z" fill="%230F1931"/><circle cx="12.5" cy="12.5" r="7" stroke="%230F1931"/></svg>');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__tagList {
+    @include u-flex($fw: wrap);
+    gap: 1rem;
+  }
+
+  &__tagItem {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: $blue01;
+    border-radius: 2rem;
+    @include u-trs;
+    @include u-hoverOp;
+  }
+
+  &__body {
+    width: 68rem;
+    min-width: 68rem;
+
+    @include u-mqMax {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__bodyCaseText {
+    margin-bottom: 8rem;
+    font-size: 1.8rem;
+    line-height: 2;
+
+    @include u-mqMax {
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+  }
+
+  &__bodyHeading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid $blue05;
+
+    @include u-mqMax {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  
+  &__bodyToc {
+    background-color: $gray03;
+    border-radius: 2rem;
+    padding: 6rem;
+    box-sizing: border-box;
+    margin-bottom: 8rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      padding: 1.9rem 1.6rem 1.6rem;
+      border-radius: 0.8rem;
+      margin-bottom: 5rem;
+    }
+
+    &Hd {
+      @include u-flex($jc: space-between, $ai: center);
+    }
+
+    &Label {
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+      border-bottom: 0.1rem solid $blue05;
+      padding-bottom: 3rem;
+
+      @include u-mqMax($maxW: $windowSP) {
+        margin-top: 1.5rem;
+        padding-top: 2.4rem;
+      }
+    }
+
+    &Toggle {
+      padding: 0.5rem 1.16rem;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      background-color: $white;
+      border: 0.1rem solid $gray04;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      @include u-trs;
+
+      @include u-mqMax {
+        font-size: 1.4rem;
+      }
+
+      &:hover {
+        background-color: $gray04;
+        color: $white;
+      }
+    }
+
+    &Content {
+      display: none;
+      margin-top: 1.2rem;
+      border-top: 0.1rem solid $blue05;
+      padding-top: 3rem;
+
+      @include u-mqMax($maxW: $windowSP) {
+        margin-top: 1.5rem;
+        padding-top: 2.4rem;
+      }
+    }
+
+    &List {
+      counter-reset: item;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        counter-increment: item;
+        counter-reset: subitem;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: block;
+          position: relative;
+          color: $textColor;
+          font-size: 1.8rem;
+          line-height: 2;
+          padding-left: 2.5rem;
+          @include u-trs;
+          text-decoration: none;
+
+          @include u-mqMax {
+            font-size: 1.4rem;
+            padding-left: 0;
+          }
+
+          &::before {
+            content: counter(item) ". ";
+            position: absolute;
+            left: 0;
+            font-size: 1.8rem;
+            line-height: 2;
+
+            @include u-mqMax {
+              position: relative;
+              font-size: 1.4rem;
+            }
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        li {
+          counter-increment: subitem;
+          padding-left: 3.5rem;
+
+          @include u-mqMax {
+            padding-left: 2.2rem;
+          }
+
+          a {
+            padding-left: 4rem;
+
+            @include u-mqMax {
+              padding-left: 0;
+            }
+
+            &::before {
+              content: counter(item) "." counter(subitem) " ";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bodyTocContentMain {
+    display: block;
+    position: relative;
+    counter-increment: item;
+    counter-reset: subitem;
+    color: $textColor;
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 2.5rem;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 1.4rem;
+      padding-left: 0;
+    }
+
+    &::before {
+      content: counter(item) ". ";
+      position: absolute;
+      left: 0;
+      font-size: 1.8rem;
+      line-height: 2;
+
+      @include u-mqMax {
+        position: relative;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__bodyTocContentMainCont {
+    padding-left: 3.5rem;
+
+    @include u-mqMax {
+      padding-left: 2.2rem;
+    }
+  }
+
+  &__bodyTocContentSub {
+    display: block;
+    position: relative;
+    counter-increment: subitem;
+    margin-right: -2.2rem;
+    padding-left: 4rem;
+    color: $textColor;
+    font-size: 1.8rem;
+    line-height: 2;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 1.4rem;
+      padding-left: 0;
+      margin-right: 0;
+    }
+
+    &::before {
+      content: counter(item) "." counter(subitem) " ";
+      position: absolute;
+      left: 0;
+      font-size: 1.8rem;
+      line-height: 2;
+
+      @include u-mqMax {
+        position: relative;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__bodyCont {
+    margin: 8rem 0 0;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-top: 8rem;
+      margin-bottom: 2.4rem;
+      border-bottom: 1px solid $blue05;
+      padding-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+
+    h3 {
+      position: relative;
+      padding-left: 2.2rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+
+      @include u-mqMax {
+        padding-left: 3.2rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .5rem;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: $blue01;
+
+        @include u-mqMax {
+          left: 0.5rem;
+        }
+      }
+
+      &.u-num {
+        padding-left: 0;
+        
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+      padding-left: 3.6rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2.3rem;
+        transform: translateY(-50%);
+        width: 0.2rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+        background: $blue01;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2;
+      margin-bottom: 2rem;
+      color: $textColor;
+    }
+
+    ul, ol {
+      margin-bottom: 2rem;
+
+      li {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        padding-left: 2rem;
+        position: relative;
+
+        &::before {
+          content: "・";
+          position: absolute;
+          top: -1.2rem;
+          left: -1rem;
+          font-size: 3rem;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0.8rem auto 2rem;
+      border-radius: 2rem;
+    }
+
+    @include u-mqMax {
+      margin-top: 5rem;
+    }
+  }
+
+  &__bodyContItem {
+    &:not(:first-child) {
+      margin-top: 8rem;
+
+      @include u-mqMax {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  &__bodySubheading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid $blue05;
+
+    @include u-mqMax {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__bodyContInner + &__bodyContInner {
+    margin-top: 4rem;
+
+    @include u-mqMax {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__bodyContentInnerHd {
+    position: relative;
+    padding-left: 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+
+    @include u-mqMax {
+      padding-left: 3.2rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    &.u-num {
+      padding-left: 0;
+      
+      &::before {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .5rem;
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: $blue01;
+
+      @include u-mqMax {
+        left: 0.5rem;
+      }
+    }
+  }
+
+  &__bodyContentInnerBlock {
+    margin-top: 1.2rem;
+    @include u-visualEditArea;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__bodyTxt {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+}
+
+.secTipsRecommended {
+  &__inner {
+    position: relative;
+    width: 100%;
+    max-width: 132rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 10rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      padding: 0;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    top: -10%;
+    left: 7.8%;
+
+    @include u-mqMax($maxW: $windowSP) {
+      left: 30%;
+    }
+  }
+
+  &__headerBadge {
+    @include u-flex($ai: center);
+    gap: 0.8rem;
+    padding: 1.3rem 2.4rem;
+    background-color: #2a4bbc;
+    border-radius: 0.8rem;
+    color: #fff;
+    font-weight: 700;
+
+    @include u-mqMax($maxW: $windowSP) {
+      padding: 0.95rem 1.7rem;
+    }
+  }
+
+  &__headerIcon {
+    width: 1.375rem;
+    height: 1.75rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    @include u-flex($fw: wrap, $ai: flex-start);
+    gap: 0 1.6rem;
+    margin: 0 0 0 4rem;
+
+    @include u-mqMax {
+      margin-left: 0;
+    }
+  }
+
+  &__headerBadge {
+    position: absolute;
+    top: -2.5rem;
+    left: 10rem;
+    @include u-flex($ai: center);
+    gap: 0.8rem;
+    padding: 1.4rem 2.4rem 1.4rem 2rem;
+    background-color: $blue01;
+    border-radius: 0.8rem;
+    color: $white;
+    font-weight: 700;
+    z-index: 2;
+
+    @include u-mqMax {
+      width: max-content;
+      top: -2.87rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.8rem 1.6rem;
+    }
+  }
+
+  &__headerIcon {
+    width: 2rem;
+    height: 2rem;
+
+    @include u-mqMax {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__headerText {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__cards {
+    @include u-flex($jc: space-between, $ai: center);
+    gap: 6rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+
+  &__card {
+    @include u-flex($jc: space-between);
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 6rem;
+    width: 63rem;
+    min-height: 20.5rem;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax($maxW: $windowSP) {
+      padding: 1.6rem;
+      width: 34.3rem;
+      min-height: 12.6rem;
+      border-radius: 0.8rem;
+      gap: 0.8rem;
+    }
+  }
+
+  &__card--disabled {
+    visibility: hidden;
+  }
+
+  &__indicator {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__indicatorItem {
+    @include u-flex($fw: wrap, $ai: center);
+  }
+
+  &__dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #2a4bbc;
+    box-shadow: 0 0 0 0.4rem rgba(58, 87, 232, 0.2);
+  }
+
+  &__title {
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__titleName {
+    font-size: 2rem;
+  }
+
+  &__titleSuffix {
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    color: #0f1931;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__imageWrap {
+    width: 12rem;
+    height: 8.58rem;
+    flex: 0 0 auto;
+    background-color: $gray01;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+

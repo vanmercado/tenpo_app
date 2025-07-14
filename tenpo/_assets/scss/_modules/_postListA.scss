@@ -1,0 +1,53 @@
+/*====================================================================
+postListA
+====================================================================*/
+.postListA {
+
+  &__item {
+    @include u-flex($ai: flex-start);
+    padding: 12px 0;
+
+    @include u-mqMax {
+      padding: 7px 0;
+    }
+  }
+
+  &__time {
+    @include u-articleText;
+    padding: 5px 20px 5px 0;
+
+    @include u-mqMax {
+      padding: 3px 10px 3px 0;
+    }
+  }
+
+  &__catLabel {
+    @include u-flex($jc: center);
+    @include u-articleText;
+    @include u-trsPC;
+    @include u-hoverOp;
+    min-width: 140px;
+    padding: 5px;
+    border-left: 1px solid $textColor;
+    border-right: 1px solid $textColor;
+
+    @include u-mqMax {
+      min-width: 90px;
+      padding: 3px;
+    }
+  }
+
+  &__postLink {
+    @include u-articleText;
+    @include u-trsPC;
+    padding-left: 20px;
+
+    @include u-hover {
+      color: $keyColor02;
+    }
+
+    @include u-mqMax {
+      padding-left: 10px;
+    }
+  }
+}

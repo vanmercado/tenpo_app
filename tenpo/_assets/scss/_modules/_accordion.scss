@@ -1,0 +1,99 @@
+/*====================================================================
+accordionBtn
+====================================================================*/
+.accordionBtn {
+  @include u-trsPC;
+  padding: 20px;
+  border: 1px solid $textColor;
+  display: block;
+  position: relative;
+
+  @include u-mqMax {
+    padding: 10px 15px;
+  }
+
+  &.is-open {
+    [class$="__icon"] {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  @include u-hover {
+    background: $textColor;
+
+    [class$="__text"] {
+      color: $bgColor01;
+    }
+    [class$="__icon"] {
+      &::before,
+      &::after {
+        background: $bgColor01;
+      }
+    }
+  }
+
+  &__text {
+    @include u-trsPC;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  &__icon {
+    @include u-imgText;
+    width: 50px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include u-mqMax {
+      width: 35px;
+    }
+
+    &::before,
+    &::after {
+      @include u-trsPC;
+      content: '';
+      width: 30px;
+      height: 1px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: $textColor;
+
+      @include u-mqMax {
+        width: 15px;
+      }
+    }
+    &::before {
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+
+
+
+/*====================================================================
+accordionContent
+====================================================================*/
+.accordionContent {
+  padding: 30px;
+  border-left: 1px solid $textColor;
+  border-right: 1px solid $textColor;
+  border-bottom: 1px solid $textColor;
+
+
+  display: none;
+
+  @include u-mqMax {
+    padding: 20px 15px;
+  }
+}

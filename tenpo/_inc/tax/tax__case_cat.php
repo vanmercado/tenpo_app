@@ -1,0 +1,1 @@
+<?php include locate_template('_inc/archive/archive__case.php'); ?>

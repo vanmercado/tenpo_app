@@ -1,0 +1,32 @@
+/*====================================================================
+gridArea
+====================================================================*/
+.gridArea {
+  @include u-flex($fw: wrap);
+  margin: 0 -1% -40px;
+
+  &__col {
+    padding: 0 1%;
+    margin-bottom: 40px;
+
+    @for $index from 1 through 12 {
+      &.u-col-#{$index} {
+        align-items: stretch;
+        flex-basis: percentage($index / 12);
+      }
+    }
+
+    @include u-mqMax {
+      @for $index from 1 through 12 {
+        &.u-col-sp-#{$index} {
+          align-items: stretch;
+          flex-basis: percentage($index / 12);
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

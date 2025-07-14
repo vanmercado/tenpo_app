@@ -1,0 +1,33 @@
+/*====================================================================
+bnrA
+====================================================================*/
+.bnrA {
+  @include u-trsPC;
+  @include u-articleText($color: $keyColor02);
+  padding: 10px 90px 10px 0;
+  position: relative;
+  font-weight: bold;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+  }
+
+  &::before {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background: $keyColor02;
+  }
+
+  &::after {
+    width: 15px;
+    height: 15px;
+    display: block;
+    right: 0;
+    border-right: 3px solid $keyColor02;
+    transform: translateX(-50%) skewX(60deg);
+  }
+}

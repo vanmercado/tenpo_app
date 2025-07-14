@@ -1,0 +1,59 @@
+// original color
+$white: #fff;
+$white02: #F5F7F8;
+$white03: #FAFAFA;
+$black: #000;
+$black01: #0F1931;
+$black02: #212121;
+$black03: #292929;
+$black04: #666;
+$black05: #424242;
+$blue01: #2A4BBC;
+$blue02: #0077FF;
+$blue03: #D6E5EC;
+$blue04: #2E50B3;
+$blue05: #D4DBF2;
+$blue06: #0459e2;
+$blue07: #003398;
+$gray01: #FAFAFA;
+$gray02: #F5F5F5;
+$gray03: #F8F8F8;
+$gray04: #A0A0A0;
+$gray05: #F2F2F2;
+$gray06: #C4C4C4;
+$gray07: #f8f7ff;
+$orange01: #FF9100;
+$orange02: #FFB347;
+$yellow: #FFE657;
+$red: #EC0000;
+
+
+// color setting
+$textColor: $black01;
+$bgColor01: $black01;
+$bgColor02: $black02;
+$bgColor03: $black03;
+$bgColor04: $black04;
+$keyColor01: $blue01;
+$keyColor02: $blue02;
+
+
+// breakpoints・width
+$contentPaddingPC: 0;
+$contentCenter: 120rem;
+$contentCenterWithPadding: $contentCenter + $contentPaddingPC * 2;
+$windowPC: 769px;
+$windowSP: 768px;
+$contentPaddingSP: 0;
+
+
+// header height
+$headerHeightPC: 100px;
+$headerHeightSP: 50px;
+$footerHeightPC: 320px;
+$footerHeightSP: 50px;
+
+
+// wpAdminBar
+$wpAdminBarPC: 32px;
+$wpAdminBarSP: 46px;

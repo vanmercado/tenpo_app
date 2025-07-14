@@ -1,0 +1,386 @@
+/*====================================================================
+Case Detail
+====================================================================*/
+.secCase {
+  @include u-flex($fw: nowrap);
+  gap: 5rem;
+
+  @include u-mqMax($maxW: $windowSP) {
+    @include u-flex($fd: column);
+  }
+
+  &__column {
+  }
+
+  &__columnTxt {
+    width: 58rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+    }
+  }
+
+  &__columnMedia {
+    width: 49rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    @include u-flex($fd: column);
+    gap: 4rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__cardHeader {
+    @include u-flex($fd: column);
+    gap: 1rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__tagList {
+    @include u-flex($ai: center);
+    gap: 0.8rem;
+  }
+
+  &__tag {
+    background-color: $blue01;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      white-space: nowrap;
+    }
+  }
+
+  &__clientInfo {
+    display: flex;
+    gap: 2.6rem;
+  }
+
+  &__clientStatus {
+    @include u-flex($ai: center);
+  }
+
+  &__clientDot {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: $blue01;
+    box-shadow: 0 0 0 0.4rem rgba(58, 87, 232, 0.2);
+    position: relative;
+    left: 0.4rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__clientName {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__clientSuffix {
+    font-size: 2.4rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__summary {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 1.6rem;
+      line-height: 1.8;
+    }
+  }
+
+  &__cardBody {
+    @include u-flex($fd: column);
+    gap: 2rem;
+    width: 50rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+    }
+  }
+
+  &__issue,
+  &__benefit {
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+  }
+
+  &__issue {
+    background-color: #f8f7ff;
+
+    &Title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.8;
+      color: $blue01;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: 1.9rem;
+        width: 1.4rem;
+        background: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.0001 20C12.5411 19.558 10.919 19.371 8.68779 16.9773C8.07969 16.3249 7.63393 14.017 7.90562 13.429C9.12939 10.7805 10.848 9.05203 13.3931 9.05203C14.0943 9.05203 14.4922 9.31832 14.9492 9.7225C16.0371 10.6848 16.7865 12.4326 16 14C15.8571 14.2848 15.2654 15.2735 15 15.5C13.5442 16.7424 12.5794 16.3474 11.435 16.0811C9.74232 15.6873 9.09945 14.0116 8.68779 12.9288C8.26353 11.813 8.00168 10.7674 7.68058 9.64004C7.24002 8.09326 8.68779 5.75 10.919 5.22253C13.5961 4.58967 14.7653 5.40096 15.7753 6.4364C16.5588 7.23971 16.5519 7.54852 16.7386 8C16.9252 8.45148 16.965 9.39943 16.7386 9.89822C16.2588 10.9552 15.3211 11.5703 14.0943 11.9759C9.70735 13.426 8.00442 11.9759 6.8106 11.5C5.7646 11.0831 4.71018 10.5 4 9.64004C3.51495 9.0527 3.08719 8 3.01506 7.16499C2.63529 2.76888 9.54805 1 11.4331 1C13.3182 1 15.2541 1.40033 15.7753 2.29545C16.7811 4.02316 16.2007 5.33338 14.0943 7.52185C13.4483 8.19301 12.8538 8.59379 12.261 8.73167C9.6298 9.34366 8.64387 8.32885 8.00442 8.19502C7.72724 8.0612 7.5461 7.79355 7.36223 7.52185C7.17835 7.25015 6.99722 6.98251 6.8106 6.4364' stroke='%232A4BBC' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")center/cover no-repeat; 
+      }
+    }
+
+    &List {
+      margin-top: 1.2rem;
+    }
+
+    &Item {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.8;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: 1.125rem;
+        width: 1.563rem;
+        background: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 0.75C15.7322 0.75 15.955 0.842676 16.1191 1.00684C16.2831 1.1709 16.3759 1.39303 16.376 1.625C16.376 1.85716 16.2833 2.07998 16.1191 2.24414L6.11914 12.2441C6.0379 12.3254 5.94114 12.3906 5.83496 12.4346C5.72889 12.4785 5.61479 12.501 5.5 12.501C5.38513 12.5009 5.27116 12.4786 5.16504 12.4346C5.05884 12.3905 4.96211 12.3255 4.88086 12.2441V12.2432L0.506836 7.86914C0.342676 7.70498 0.25 7.48216 0.25 7.25C0.250092 7.01797 0.342758 6.79591 0.506836 6.63184C0.670913 6.46776 0.892968 6.37509 1.125 6.375C1.35716 6.375 1.57998 6.46768 1.74414 6.63184L5.5 10.3877L14.8818 1.00684C15.0459 0.842758 15.268 0.750092 15.5 0.75Z' fill='%232A4BBC' stroke='%232A4BBC' stroke-width='0.5'/%3E%3C/svg%3E%0A")center/cover no-repeat; 
+      }
+
+      @include u-mqMax {
+        &::before {
+          top: 1.4rem
+        };
+      }
+    }
+  }
+
+  &__benefit {
+    border: 0.2rem solid #ff9100;
+    margin-top: 2rem;
+
+    &Title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.8;
+      color: $orange01;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: 1.4rem;
+        width: 1.8rem;
+        background: url("data:image/svg+xml,%3Csvg width='22' height='17' viewBox='0 0 22 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.87793 0.75293C9.59839 0.71287 10.2998 1.0313 10.7715 1.73047C11.0948 2.20981 11.0893 2.84179 11.04 3.31055C10.9856 3.82799 10.8467 4.38914 10.6963 4.88867C10.6102 5.17439 10.516 5.44812 10.4277 5.69434C10.5053 5.69303 10.5861 5.69161 10.6699 5.69043C11.5037 5.67872 12.6355 5.67389 13.8203 5.70508C15.0018 5.73618 16.2515 5.80299 17.3184 5.93457C17.8514 6.00033 18.3537 6.08424 18.7852 6.19238C19.2006 6.29653 19.6162 6.43859 19.9316 6.65234L19.9326 6.65332C20.4829 7.02751 20.8256 7.67375 20.7363 8.37891C20.6455 9.09597 20.1368 9.69386 19.3564 10.0654C18.8673 10.2984 18.229 10.4555 17.5967 10.5674C16.9513 10.6816 16.2558 10.7579 15.6221 10.8096C14.9866 10.8614 14.4026 10.8897 13.9785 10.9043H13.9756C13.6205 13.5957 11.3611 16.25 8.18262 16.25C6.47155 16.2499 5.1948 15.5326 4.36035 14.833C3.9437 14.4837 3.63113 14.1349 3.42188 13.8711C3.39355 13.8354 3.36943 13.7992 3.34473 13.7666H2C1.58579 13.7666 1.25 13.4308 1.25 13.0166V7.53223C1.25 7.34564 1.31958 7.16641 1.44336 7.0293L1.50098 6.97168L1.58105 6.90918C1.6645 6.8527 1.75881 6.8133 1.8584 6.79395H1.86035C1.86297 6.79342 1.86782 6.79229 1.87402 6.79102C1.88689 6.78837 1.90783 6.78414 1.93457 6.77832C1.98806 6.76667 2.06739 6.74818 2.16699 6.72363C2.36727 6.67427 2.64675 6.59938 2.95801 6.49707C3.60077 6.28577 4.30102 5.98383 4.76074 5.60547C5.29348 5.16686 5.68127 4.47731 6.03418 3.70703C6.18294 3.38233 6.38505 2.90611 6.52441 2.6084C6.67737 2.28165 6.86449 1.9178 7.10645 1.64844L7.28418 1.4668C7.71777 1.06198 8.27894 0.786325 8.87793 0.75293Z' stroke='%23FF9100' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")center/cover no-repeat; 
+      }
+    }
+
+    &List {
+      margin-top: 1.2rem;
+    }
+
+    &Item {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.8;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: 1.125rem;
+        width: 1.563rem;
+        background: url("data:image/svg+xml,%3Csvg width='17' height='13' viewBox='0 0 17 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 0.75C15.7322 0.75 15.955 0.842676 16.1191 1.00684C16.2831 1.1709 16.3759 1.39303 16.376 1.625C16.376 1.85716 16.2833 2.07998 16.1191 2.24414L6.11914 12.2441C6.0379 12.3254 5.94114 12.3906 5.83496 12.4346C5.72889 12.4785 5.61479 12.501 5.5 12.501C5.38513 12.5009 5.27116 12.4786 5.16504 12.4346C5.05884 12.3905 4.96211 12.3255 4.88086 12.2441V12.2432L0.506836 7.86914C0.342676 7.70498 0.25 7.48216 0.25 7.25C0.250092 7.01797 0.342758 6.79591 0.506836 6.63184C0.670913 6.46776 0.892968 6.37509 1.125 6.375C1.35716 6.375 1.57998 6.46768 1.74414 6.63184L5.5 10.3877L14.8818 1.00684C15.0459 0.842758 15.268 0.750092 15.5 0.75Z' fill='%23FF9100' stroke='%23FF9100' stroke-width='0.5'/%3E%3C/svg%3E%0A")center/cover no-repeat; 
+      }
+
+      @include u-mqMax {
+        &::before {
+          top: 1.4rem
+        };
+      }
+    }
+  }
+
+  &__imageGroup {
+    @include u-flex($ai: center);
+    gap: 3rem;
+    width: 49rem;
+    height: 50.3rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 31.1rem;
+      height: 32rem;
+      gap: 0.5rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 14.59rem;
+      height: 31.29rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.secFeatureBlock {
+  &__layout {
+    display: flex;
+    gap: 4rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      @include u-flex($fd: column);
+    }
+  }
+
+  &__panel {
+    @include u-flex($fd: column);
+    gap: 2rem;
+    width: 54rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid #d4dbf2;
+    padding-bottom: 1.2rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &__body {
+    @include u-flex($fd: column, $ai: center);
+    gap: 4rem;
+  }
+
+  &__intro {
+    @include u-flex($fd: column);
+    gap: 2rem;
+    width: 100%;
+  }
+
+  &__screenshots {
+    @include u-flex($jc: center, $ai: center);
+    gap: 4rem;
+    // padding: 4rem 5rem 0; 
+    background-color: #d4dbf2;
+    border-radius: 0.8rem;
+    min-height: 30.8rem;
+
+    @include u-mqMax {
+      min-height: auto;
+    }
+  }
+
+  &__screenshot {
+    width: 54rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 30.2rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  &__featureGrid {
+    width: 100%;
+    @include u-flex($jc: space-between);
+
+    @include u-mqMax($maxW: $windowSP) {
+      @include u-flex($fd: column);
+      gap: 2rem;
+    }
+  }
+
+  &__featureCard {
+    width: 24.9rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+    }
+  }
+
+  &__imageGroup {
+    background-color: #d4dbf2;
+    width: 25rem;
+    height: 16rem;
+
+    @include u-mqMax($maxW: $windowSP) {
+      width: 100%;
+      height: auto;
+      border-radius: 0.8rem;
+
+      img {
+        border-radius: 0.8rem;
+      }
+    }
+  }
+
+  &__featureContent {
+    padding: 1.2rem;
+  }
+
+  &__featureTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  &__featureDescription {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+}

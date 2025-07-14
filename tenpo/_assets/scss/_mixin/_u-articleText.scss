@@ -1,0 +1,12 @@
+@mixin u-articleText($color: $textColor, $fzPC: 1.6rem, $lhPC: 2, $lts: normal, $fzSP: 1.6rem, $lhSP: 1.8, $fw: normal) {
+  color: $color;
+  font-size: $fzPC;
+  font-weight: $fw;
+  line-height: $lhPC;
+  letter-spacing: $lts;
+
+  @include u-mqMax {
+    font-size: $fzSP;
+    line-height: $lhSP;
+  }
+}

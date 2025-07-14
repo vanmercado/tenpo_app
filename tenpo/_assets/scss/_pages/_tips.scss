@@ -1,0 +1,132 @@
+/*====================================================================
+Tips
+====================================================================*/
+.secAppTips {
+  &__inner {
+    max-width: 113rem;
+    margin: 0 auto;
+    padding-top: 6rem;
+
+    @include u-mqMax {
+      max-width: 34.3rem;
+      padding-top: 2.3rem;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    list-style-type: none;
+    @include u-flex($jc: flex-start, $fw: wrap);
+    column-gap: 2.8rem;
+    row-gap: 4rem;
+
+    @include u-mqMax {
+      gap: 2.8rem;
+    }
+  }
+
+  &__listItem {
+    @include u-mqMax {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background-color: $white;
+    box-shadow: 0px 5px 20px 0px rgba($black, 0.03);
+    width: 35.47rem;
+    height: 100%;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax {
+      width: 100%;
+      height: auto;
+      min-height: 30.8rem;
+    }
+  }
+
+  &__cardImageBox {
+    height: 18rem;
+    width: 100%;
+    color: $white;
+    background-color: $gray05;
+  }
+
+  &__cardImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__cardTitleBox {
+    padding: 1.55rem 1.25rem 5.7rem 1.25rem;
+
+    @include u-mqMax {
+      padding: 1.55rem 1rem 1.6rem 1.19rem;
+    }
+  }
+
+  &__cardTitle {
+    font-family: $NotoSansJP;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    color: $black;
+    margin-top: 1.4rem;
+
+    @include u-mqMax {
+      line-height: 1.8;
+      letter-spacing: 0;
+    }
+  }
+
+  &__cardDetails {
+    @include u-flex($fw: wrap, $ai: center);
+    gap: 1.2rem;
+  }
+
+  &__cardDetailsLabel {
+    background-color: $blue01;
+    padding: 0.2rem 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $white;
+    border-radius: 2rem;
+    width: fit-content;
+    min-width: 8rem;
+    min-height: 2.4rem;
+    margin: 0;
+    text-align: center;
+    align-content: center;
+  }
+
+  &__cardDetailsDate {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #A0A0A0;
+  }
+
+  &__noPost {
+    padding: 5rem 0 10rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include u-mqMax {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.secAppTips + .secInquiry {
+  margin-top: 10rem;
+
+  @include u-mqMax {
+    margin-top: 11.2rem;
+  }
+}

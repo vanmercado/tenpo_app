@@ -1,0 +1,844 @@
+/*====================================================================
+Testimonies Detail
+====================================================================*/
+
+.secTestimonial {
+  &__inner {
+    @include u-flex($jc: space-between, $ai: center);
+    gap: 6rem;
+
+    @include u-mqMax {
+      @include u-flex($fd: column);
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 3.4rem;
+    @include u-flex($ai: flex-end);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="5" fill="%232A4BBC"/><circle cx="9" cy="9" r="7" stroke="%232A4BBC" stroke-opacity="0.2" stroke-width="4"/></svg>');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__tagWrapper {
+    @include u-flex();
+    gap: 1rem;
+  }
+
+  &__titleName {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+
+    @include u-mqMax {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__titleSuffix {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+      line-height: 1.25;
+    }
+  }
+
+  &__text {
+    margin-top: 0.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include u-mqMax {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid $blue05;
+    }
+  }
+
+  &__tag {
+    margin-top: 2rem;
+    display: block;
+    max-width: max-content;
+    background-color: $blue01;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+
+    @include u-mqMax {
+      margin-top: 1rem;
+    }
+  }
+
+  &__imageWrap {
+    flex-shrink: 0;
+    width: 71.3rem;
+    height: 50rem;
+
+    @include u-mqMax {
+      width: 100%;
+      height: 22.2rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+
+    @include u-mqMax {
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+.secCaseDetail {
+  &__inner {
+    @include u-flex();
+    gap: 8rem;
+
+    @include u-mqMax {
+      @include u-flex($fd: column);
+    }
+  }
+
+  &__sidebar {
+    width: 36rem;
+    min-width: 36rem;
+
+    @include u-mqMax {
+      display: none;
+    }
+  }
+
+  &__sidebarItem {
+    &:not(:first-child) {
+      margin-top: 8rem;
+    }
+  }
+
+  &__sidebarItemHd {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid $blue05;
+  }
+
+  &__articleItem {
+    @include u-flex($ai: flex-start, $jc: space-between);
+    gap: 2rem;
+    padding: 1.2rem 0;
+    color: $textColor;
+    @include u-trs;
+    @include u-hoverOp;
+
+    &:not(:first-child) {
+      border-top: 1px solid $blue05;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__articleContent {
+    @include u-flex($fw: wrap, $ai: center);
+    align-content: flex-start;
+    gap: 0.5rem 1rem;
+  }
+
+  &__articleTitle {
+    position: relative;
+    padding-left: 2.8rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4rem;
+      left: 0;
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-image: url('data:image/svg+xml,<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="7" r="4" fill="%232A4BBC"/><circle cx="8" cy="7" r="5.5" stroke="%232A4BBC" stroke-opacity="0.2" stroke-width="3"/></svg>');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__articleTitleSpan {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__summary {
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__articleImage {
+    width: 12rem;
+    min-width: 12rem;
+    height: 8.6rem;
+    background-color: $gray06;
+  }
+
+  &__articleImageItem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__searchBox {
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+
+    @include u-mqMax {
+      max-width: 34.3rem;
+    }
+  }
+
+  &__searchBoxInput {
+    font-size: 1.6rem;
+    color: $black04;
+    line-height: 1.5;
+    border-radius: 2rem;
+    padding: 0.85rem 1.6rem;
+    border: 0.1rem solid $black;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $gray04;
+      font-weight: 700;
+    }
+  }
+
+  &__searchBoxBtn {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.6464 21.3536C19.8417 21.5488 20.1583 21.5488 20.3536 21.3536C20.5488 21.1583 20.5488 20.8417 20.3536 20.6464L19.6464 21.3536ZM17 18L16.6464 18.3536L19.6464 21.3536L20 21L20.3536 20.6464L17.3536 17.6464L17 18Z" fill="%230F1931"/><circle cx="12.5" cy="12.5" r="7" stroke="%230F1931"/></svg>');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__tagList {
+    @include u-flex($fw: wrap);
+    gap: 1rem;
+  }
+
+  &__tagItem {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: $blue01;
+    border-radius: 2rem;
+    @include u-trs;
+    @include u-hoverOp;
+  }
+
+  &__body {
+    width: 68rem;
+    min-width: 68rem;
+
+    @include u-mqMax {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__bodyHeading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid $blue05;
+
+    @include u-mqMax {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__bodyCaseTitle {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 8.34rem;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__bodyToc {
+    background-color: $gray03;
+    border-radius: 2rem;
+    padding: 6rem;
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      padding: 1.9rem 1.6rem 1.6rem;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__bodyTocHd {
+    @include u-flex($jc: space-between, $ai: center);
+  }
+
+  &__bodyTocLabel {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.6;
+  }
+
+  &__bodyTocToggle {
+    padding: 0.5rem 1.16rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: $white;
+    border: 0.1rem solid $gray04;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    @include u-trs;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      background-color: $gray04;
+      color: $white;
+    }
+  }
+
+  &__bodyTocContent {
+    display: none;
+    margin-top: 1.2rem;
+    border-top: 0.1rem solid $blue05;
+    padding-top: 3rem;
+
+    @include u-mqMax {
+      margin-top: 1.5rem;
+      padding-top: 2.4rem;
+    }
+  }
+
+  &__bodyTocContentMain {
+    display: block;
+    position: relative;
+    counter-increment: item;
+    counter-reset: subitem;
+    color: $textColor;
+    font-size: 1.8rem;
+    line-height: 2;
+    padding-left: 2.5rem;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+      padding-left: 0;
+    }
+
+    &::before {
+      content: counter(item) ". ";
+      position: absolute;
+      left: 0;
+      font-size: 1.8rem;
+      line-height: 2;
+
+      @include u-mqMax {
+        position: relative;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__bodyTocContentMainCont {
+    padding-left: 3.5rem;
+
+    @include u-mqMax {
+      padding-left: 2.2rem;
+    }
+  }
+
+  &__bodyTocContentSub {
+    display: block;
+    position: relative;
+    counter-increment: subitem;
+    margin-right: -2.2rem;
+    padding-left: 4rem;
+    color: $textColor;
+    font-size: 1.8rem;
+    line-height: 2;
+    @include u-trs;
+    @include u-hoverOp;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+      padding-left: 0;
+      margin-right: 0;
+    }
+
+    &::before {
+      content: counter(item) "." counter(subitem) " ";
+      position: absolute;
+      left: 0;
+      font-size: 1.8rem;
+      line-height: 2;
+
+      @include u-mqMax {
+        position: relative;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__bodyCont {
+    margin: 8rem 0 0;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-top: 8rem;
+      margin-bottom: 2.4rem;
+      border-bottom: 1px solid $blue05;
+      padding-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+
+    h3 {
+      position: relative;
+      padding-left: 2.2rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+
+      @include u-mqMax {
+        padding-left: 3.2rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .5rem;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: $blue01;
+
+        @include u-mqMax {
+          left: 0.5rem;
+        }
+      }
+
+      &.u-num {
+        padding-left: 0;
+        
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-top: 4rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+      padding-left: 3.6rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2.3rem;
+        transform: translateY(-50%);
+        width: 0.2rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+        background: $blue01;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2;
+      margin-bottom: 2rem;
+      color: $textColor;
+    }
+
+    ul, ol {
+      margin-bottom: 2rem;
+
+      li {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        padding-left: 2rem;
+        position: relative;
+
+        &::before {
+          content: "・";
+          position: absolute;
+          top: -1.2rem;
+          left: -1rem;
+          font-size: 3rem;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0.8rem auto 2rem;
+      border-radius: 2rem;
+    }
+
+    @include u-mqMax {
+      margin-top: 5rem;
+    }
+  }
+
+  &__bodyContItem {
+    &:not(:first-child) {
+      margin-top: 8rem;
+
+      @include u-mqMax {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  &__bodySubheading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.1rem solid $blue05;
+
+    @include u-mqMax {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__bodyContInner + &__bodyContInner {
+    margin-top: 4rem;
+
+    @include u-mqMax {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__bodyContentInnerHd {
+    position: relative;
+    padding-left: 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+
+    @include u-mqMax {
+      padding-left: 3.2rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    &.u-num {
+      padding-left: 0;
+      
+      &::before {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .5rem;
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: $blue01;
+
+      @include u-mqMax {
+        left: 0.5rem;
+      }
+    }
+  }
+
+  &__bodyContentInnerBlock {
+    margin-top: 1.2rem;
+    @include u-visualEditArea;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__bodyTxt {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+}
+
+.secRecommended {
+
+  &.caseSingle {
+    padding-bottom: 5rem;
+    background-color: $white03;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    max-width: 132rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10rem;
+
+    @include u-mqMax {
+      padding-bottom: 6rem;
+      max-width: 34.3rem;
+    }
+
+    &.caseSingle {
+      padding: 0;
+    }
+  }
+
+  &__headerBadge {
+    position: absolute;
+    top: -2.4rem;
+    left: 10rem;
+    @include u-flex($ai: center);
+    gap: 0.8rem;
+    padding: 1.4rem 2.4rem 1.4rem 2rem;
+    background-color: $blue01;
+    border-radius: 0.8rem;
+    color: $white;
+    font-weight: 700;
+    z-index: 2;
+
+    @include u-mqMax {
+      width: max-content;
+      top: -1.87rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.8rem 1.6rem;
+    }
+  }
+
+  &__headerIcon {
+    width: 2rem;
+    height: 2rem;
+
+    @include u-mqMax {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__headerText {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__content {
+    @include u-flex($fw: wrap, $ai: center);
+  }
+
+  &__cards {
+    @include u-flex($jc: space-between, $ai: stretch);
+    gap: 6rem;
+
+    @include u-mqMax {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+
+  &__cardsItem {
+    @include u-flex($jc: space-between);
+    gap: 2rem;
+    background-color: $white;
+    color: $textColor;
+    border-radius: 4rem;
+    padding: 6rem;
+    width: 63rem;
+    @include u-hoverOp;
+    @include u-trs;
+    box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.1);
+
+    @include u-mqMax {
+      padding: 1.6rem;
+      width: 34.3rem;
+      border-radius: 0.8rem;
+      gap: 0.8rem;
+
+      &:first-of-type {
+        padding-top: 2.4rem;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 3.6rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      background-image: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="5" fill="%232A4BBC"/><circle cx="9" cy="9" r="7" stroke="%232A4BBC" stroke-opacity="0.2" stroke-width="4"/></svg>');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+
+      @include u-mqMax {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+
+    &.beforeHidden {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__titleName {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__titleSuffix {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .is_page__single.is_post__case & {
+      font-size: 2rem;
+
+      @include u-mqMax {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+      display: block;
+    }
+  }
+
+  &__imageWrap {
+    width: 100%;
+    max-width: 12rem;
+    height: 8.6rem;
+    background: $gray06;
+
+    img {
+      width: 100%;
+      max-width: 12rem;
+      height: auto;
+      min-height: 8.6rem;
+    }
+  }
+}
+
